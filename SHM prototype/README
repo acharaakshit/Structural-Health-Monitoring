@@ -50,7 +50,7 @@ Usage Instructions
 	ii) Also run the following to install pyuic4 and other tools
 		-> sudo apt-get install pyqt4-dev-tools
 
-## If everythign fails,
+## If everything fails,
 	i) If everything fails, please install sip and PyQt4 from riverbankcomputing.com and compile both from source. Do it while the virtualenv is activated.	
 
 
