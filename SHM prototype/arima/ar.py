@@ -12,19 +12,17 @@ def main():
 	series['e'] = pow((series['a']*series['a'] + series['b']*series['b'] + series['c']*series['c']), 0.5)
 
 	df = pd.DataFrame({'$a': series['e']})
-	#print(df)
+	print(df)
 
 	fd = np.array(df)
-	plt.plot(fd,'--*b')
+	plt.plot(fd)
 
 
 
 	model = AR(fd)
 	results = model.fit()
 	r = results.predict()
-	plt.plot(r,'--*r')
-	plt.legend(['original','smoothed'], loc=0)
-	plt.grid(True)
+	plt.plot(r)
 	plt.xlabel("Indices",fontsize=12)
 	plt.ylabel("Data",fontsize=12)
 	plt.show()

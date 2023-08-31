@@ -2,10 +2,11 @@ import matplotlib.pyplot as plt
 from pandas import read_csv
 import pandas as pd
 import numpy as np
-
+import os
 
 def main():
-	series = read_csv('/home/akshit/Documents/Downloads/2.csv', header=0, index_col=0, squeeze=True)
+	abspath= os.path.abspath(os.curdir)
+	series = read_csv(abspath+'/2.csv', header=0, index_col=0, squeeze=True)
 	series.columns = ['a', 'b', 'c', 'd']
 	series['e'] = pow((series['a']*series['a'] + series['b']*series['b'] + series['c']*series['c']), 0.5)
 
@@ -36,6 +37,9 @@ def main():
 	#after_trailing
 	print("Asdqwwe")
 	plt.plot(mn)
+	plt.xlabel('Data',fontsize=12)
+	plt.ylabel('Indices',fontsize=12)
 	plt.show()
+
 if __name__ == '__main__':
 	main()

@@ -3,10 +3,12 @@ from pandas import read_csv
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 def main(p,d,q):
 	#print("213323123123 starima")
-	series = read_csv('/home/akshit/Documents/Downloads/2.csv', header=0, index_col=0, squeeze=True)
+	abspath= os.path.abspath(os.curdir)
+	series = read_csv(abspath+'/2.csv', header=0, index_col=0, squeeze=True)
 	series.columns = ['a', 'b', 'c', 'd']
 	series['e'] = pow((series['a']*series['a'] + series['b']*series['b'] + series['c']*series['c']), 0.5)
 
@@ -28,6 +30,8 @@ def main(p,d,q):
 	r = results.predict()
 	print("resultsARIMA")
 	plt.plot(r)
+	plt.xlabel('Data',fontsize=12)
+	plt.ylabel('Indices',fontsize=12)
 	plt.show()
 
 
