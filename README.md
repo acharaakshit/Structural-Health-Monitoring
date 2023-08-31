@@ -14,6 +14,8 @@ Tested with `Ubuntu 20.01.1`, `conda 4.12.0`, `pip 21.3.0`, `Python 3.6.7`.
 - Install the other dependencies: `pip install -r requirements.txt`
 - Run the application: `python SHM.py`
 
-The GUI window opens up.
+The GUI window opens up. The exponential smoothing looks like this:
+
+![plot](./bexp.png)
 
 Enjoy!!
